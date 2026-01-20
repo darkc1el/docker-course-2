@@ -1,0 +1,7 @@
+docker run --name postgres -v /home/vasa/data:/data/pg -e POSTGRES_PASSWORD=test123 -d postgres -d
+docker stop postgres
+docker rm postgres
+ls /home/vasa/data
+mkdir /home/vasa1/data
+cp /home/vasa/data /home/vasa1/data
+docker run --name postgres -v /home/vasa1/data:/data/pg -e POSTGRES_PASSWORD=test123 -d postgres -d
