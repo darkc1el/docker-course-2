@@ -1,0 +1,8 @@
+---
+- name: Start compose
+  hosts: servers
+  tasks:
+    - name: Run `docker compose up` again
+      community.docker.docker_compose_v2:
+        project_src: "./"
+      register: output
